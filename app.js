@@ -19,7 +19,7 @@ app.get('/', function(req, res){
 })
 
 app.use('/', calcRouter);
-app.use('/quote', calcRouter);
+app.use('/quote', quoteRouter);
 
 var server = app.listen(3000, '0.0.0.0', function(){
     var host = server.address().address 
