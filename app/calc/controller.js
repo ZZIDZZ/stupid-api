@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 module.exports = {
     calc: async (req, res) => {
+        try {
         let exp = req.query.exp;
         console.log(req.query)
         console.log(JSON.stringify(req.headers))
@@ -26,6 +27,10 @@ module.exports = {
                 console.log('Error Logged!');
             });
             return res.status(500).send("error");
+        }} catch (err) {
+            res
+            .status(500)
+            .json({ message: err.message || 'server failure' });
         }
     }
 }
