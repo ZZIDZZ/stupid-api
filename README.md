@@ -6,9 +6,6 @@ will return 6<br />
 ## Quotes <br />
 ```GET http://{URL}/quote```<br />
 will return a random quote<br />
-<br />
 <br /> 
-```
-npm run dev
-```<br />  
+```npm run dev```<br />  
 to run debugging
