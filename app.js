@@ -5,6 +5,7 @@ const fs = require('fs')
 var logger = require('morgan');
 
 var calcRouter = require('./app/calc/router');
+var quoteRouter = require('./app/quote/router');
 
 
 var app = express();
@@ -18,6 +19,7 @@ app.get('/', function(req, res){
 })
 
 app.use('/', calcRouter);
+app.use('/quote', calcRouter);
 
 var server = app.listen(3000, '0.0.0.0', function(){
     var host = server.address().address 
